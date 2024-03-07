@@ -1,0 +1,77 @@
+.outline {
+  outline: transparent;
+  border: 0px;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+div.drink {
+  display: block;
+  text-align: left;
+  margin-left: 48rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0;
+}
+
+div.order {
+  display: block;
+  text-align: left;
+  margin-top: 2rem;
+  position: relative;
+  margin-left: 20rem;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  outline: 1px solid black;
+  width: 18rem;
+}
+
+.menu {
+  outline: 1px solid black;
+  max-width: 15rem;
+  height: 1.2rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.currOrder {
+  outline: 1px solid black;
+  max-width: 18rem;
+  min-height: 32.78rem;
+  position: relative;
+}
+
+.drinkBtns {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.orderBtns {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+#currOrderTitle {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+#orderDrinks {
+  padding-left: 1rem;
+}
+
+#smoothieOpts {
+  display: none;
+}
+
+#milkshakeOpts {
+  display: none;
+}

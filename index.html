@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Bevvies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="order">
+      <div class="currOrder">
+        <p id="currOrderTitle">Current Order:</p>
+        <p id="orderDrinks"></p>
+      </div>
+      <div class="menu">
+        <p>Order total: £<span id="orderTotal">0.00</span></p>
+    </div>
+    <div class="orderBtns">
+      <button type="button" id="orderFav" disabled>Order my favourite</button>
+      <button type="button" id="place">Place order</button>
+    </div>
+    </div>
+    <div class="drink">
+        <form method="post" id="myForm">
+            <fieldset class="outline">
+              <p>Please select drink size:</p>
+              <div>
+                <input
+                  type="radio"
+                  id="small"
+                  name="drinkSize"
+                  value="small"
+                />
+                <label for="small" class="tick">Small - £2.70</label>
+              </div>
+              <div>
+                <input type="radio" id="medium" name="drinkSize" value="medium" checked/>
+                <label for="medium" class="tick">Medium - £3.20</label>
+              </div>
+              <div>
+                <input type="radio" id="large" name="drinkSize" value="large"/>
+                <label for="large" class="tick">Large - £3.70</label>
+              </div>
+              <div>
+                <input type="radio" id="xlarge" name="drinkSize" value="xlarge" />
+                <label for="xlarge" class="tick">Extra-large - £4.50</label>
+              </div>
+            </fieldset>
+            <fieldset class="outline" id="drinkTypes">
+              <p>Type:</p>
+              <div>
+                <input
+                  type="radio"
+                  id="smoothie"
+                  name="drinkType"
+                  value="smoothie"
+                />
+                <label for="smoothie" class="tick">Smoothie</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="milkshake"
+                  name="drinkType"
+                  value="milkshake"
+                />
+                <label for="milkshake" class="tick">Milkshake</label>
+              </div>
+            </fieldset>
+            <fieldset class="outline">
+              <p>Ingredients:</p>
+              <div>
+                <input
+                  type="checkbox"
+                  id="banana"
+                  name="ingredients"
+                  value="banana"
+                />
+                <label for="banana" class="tick">Banana</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="raspberry"
+                  name="ingredients"
+                  value="raspberry"
+                />
+                <label for="raspberry" class="tick">Raspberry</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="cranberry"
+                  name="ingredients"
+                  value="cranberry"
+                />
+                <label for="cranberry" class="tick">Cranberry</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="strawberry"
+                  name="ingredients"
+                  value="strawberry"
+                />
+                <label for="strawberry" class="tick">Strawberry</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="chocolate"
+                  name="ingredients"
+                  value="chocolate"
+                />
+                <label for="chocolate" class="tick">Chocolate</label>
+              </div>
+            </fieldset>
+            <div id="smoothieOpts">
+                <fieldset class="outline">
+                    <p>Select one of the following bases:</p>
+                    <div>
+                      <input
+                        type="radio"
+                        id="appleJuice"
+                        name="smoothieBases"
+                        value="appleJuice"
+                      />
+                      <label for="appleJuice" class="tick">Apple juice</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="orangeJuice"
+                        name="smoothieBases"
+                        value="orangeJuice"
+                        checked
+                      />
+                      <label for="orangeJuice" class="tick">Orange juice</label>
+                    </div>
+                  </fieldset>
+            </div>
+            <div id="milkshakeOpts">
+                <fieldset class="outline">
+                    <p>Select one of the following bases:</p>
+                    <div>
+                      <input
+                        type="radio"
+                        id="wholeMilk"
+                        name="milkBases"
+                        value="wholeMilk"
+                      />
+                      <label for="wholeMilk" class="tick">Whole Milk</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="ssMilk"
+                        name="milkBases"
+                        value="ssMilk"
+                        checked
+                        
+                      />
+                      <label for="ssMilk" class="tick">Semi-skilled Milk</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="cocoMilk"
+                        name="milkBases"
+                        value="cocoMilk"
+                        
+                      />
+                      <label for="cocoMilk" class="tick">Coconut Milk</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="oatMilk"
+                        name="milkBases"
+                        value="oatMilk"
+                        
+                      />
+                      <label for="oatMilk" class="tick">Oat Milk</label>
+                    </div>
+                    <div>
+                  </fieldset>
+                  <fieldset class="outline">
+                    <p>Add extras (85p each):</p>
+                    <div>
+                      <input type="checkbox" id="malt" name="extras" value="malt" />
+                      <label for="malt" class="tick">Malt</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="marshmallows"
+                        name="extras"
+                        value="marshmallows"
+                      />
+                      <label for="marshmallows" class="tick">Marshmallows</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="w/c"
+                        name="extras"
+                        value="w/c"
+                      />
+                      <label for="w/c" class="tick">Whipped Cream</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="flake"
+                        name="extras"
+                        value="flake"
+                      />
+                      <label for="flake" class="tick">A flake</label>
+                    </div>
+                  </fieldset>
+            </div>
+          </form>
+          <div class="menu">
+            <p>Current drink: £<span id="drinkTotal">3.20</span></p>
+        </div>
+        <div class="drinkBtns">
+          <button type="button" id="saveFav" disabled>Save my favourite</button>
+          <button type="button" id="add" disabled>Add to order</button>
+        </div>
+    </div>
+  </body>
+</html>
